@@ -22,5 +22,14 @@ public class RecurringDepositApplication {
         logger.info(
                 "Recurring Deposit Application Started Successfully");
 
+        @Bean
+CommandLineRunner checkDb(DataSource dataSource) {
+    return args -> {
+        System.out.println(
+            dataSource.getConnection().getMetaData().getURL()
+        );
+    };
+}
+
     }
 }

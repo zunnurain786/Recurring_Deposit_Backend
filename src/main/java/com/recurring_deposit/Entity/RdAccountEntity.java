@@ -58,21 +58,21 @@ public class RdAccountEntity {
     @Column(nullable = false)
     private RdAccountStatus status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(
             name = "customer_id",
             nullable = false
     )
     private CustomerEntity customer;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(
             name = "scheme_id",
             nullable = false
     )
     private SchemeEntity scheme;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "agent_id")
     private AgentEntity agent;
 

@@ -18,7 +18,7 @@ public class CorsConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173"));
+                List.of(ENV.FRONTEND_URL));
 
         configuration.setAllowedMethods(
                 List.of(

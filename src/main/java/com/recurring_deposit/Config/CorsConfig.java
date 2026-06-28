@@ -18,7 +18,7 @@ public class CorsConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of(ENV.FRONTEND_URL));
+        List.of("https://recurring-deposit-management.onrender.com"));
 
         configuration.setAllowedMethods(
                 List.of(
